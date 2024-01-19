@@ -1,4 +1,5 @@
-cmake_minimum_required(VERSION 3.2)
-project(hw1)
+enable_testing()
 
-add_executable(main main.cc hw1.cc)
+add_executable(test_main main.cc hw1.cc)
+target_link_libraries(test_main gtest)
+add_test(NAME test_hw1 COMMAND test_main)
